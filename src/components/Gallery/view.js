@@ -6,6 +6,7 @@ import {
   Menu,
   Transition,
 } from "@headlessui/react";
+import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 import {
   CogIcon,
@@ -306,14 +307,6 @@ export default function Example({ entries, assets }) {
                             "object-cover pointer-events-none"
                           )}
                         />
-                        <button
-                          type="button"
-                          className="absolute inset-0 focus:outline-none"
-                        >
-                          <span className="sr-only">
-                            View details for {file.name}
-                          </span>
-                        </button>
                       </div>
                       <p className="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">
                         {file.name}

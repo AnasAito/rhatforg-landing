@@ -1,9 +1,12 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 import Form from "./form";
 export default function Landing() {
+  const myRef = useRef(null);
+  const executeScroll = () =>
+    myRef.current.scrollIntoView({ behavior: "smooth" });
   return (
     <>
       <Navbar transparent />
@@ -38,6 +41,23 @@ export default function Landing() {
                     using Tailwind Starter Kit. It features multiple CSS
                     components based on the Tailwindcss design system.
                   </p>
+                  <div className="mt-5 sm:mt-8 sm:flex justify-center ">
+                    <div className="rounded-md shadow">
+                      <Link to="/gallery">
+                        <button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                          Gallery
+                        </button>
+                      </Link>
+                    </div>
+                    <div className="mt-3 sm:mt-0 sm:ml-3">
+                      <button
+                        onClick={executeScroll}
+                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                      >
+                        Contact us
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,7 +118,10 @@ export default function Landing() {
             </div>
           </div>
         </section>
-        <section className="relative block py-24 lg:pt-0 bg-gray-900">
+        <section
+          ref={myRef}
+          className="relative block py-24 lg:pt-0 bg-gray-900"
+        >
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
