@@ -27,6 +27,7 @@ import {
   ViewGridIcon as ViewGridIconSolid,
   ViewListIcon,
 } from "@heroicons/react/solid";
+import ProgressiveImage from "react-progressive-image";
 import DropMenu from "./menu.js";
 const navigation = [
   { name: "Home", href: "#", icon: HomeIcon, current: false },
@@ -44,18 +45,6 @@ const tabs = [
   { name: "Interlook", href: "#", current: false },
   { name: "Bentonite ", href: "#", current: false },
 ];
-const publishingOptions = [
-  {
-    name: "Published",
-    description: "This job posting can be viewed by anyone who has the link.",
-    current: true,
-  },
-  {
-    name: "Draft",
-    description: "This job posting will no longer be publicly accessible.",
-    current: false,
-  },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -63,7 +52,7 @@ function classNames(...classes) {
 
 export default function Example({ entries, assets }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [selected, setSelected] = useState(publishingOptions[0]);
+
   const [tab, setTab] = useState("All");
   const [entries_, setEntries] = useState(entries["data"]);
   return (
@@ -296,17 +285,33 @@ export default function Example({ entries, assets }) {
                           false
                             ? "ring-2 ring-offset-2 ring-indigo-500"
                             : "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500",
-                          "group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden"
+                          "group block w-full h-96 aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden"
                         )}
                       >
-                        <img
+                        <ProgressiveImage
+                          //  delay={1000}
                           src={`https:${assets[file.img_id]}`}
-                          alt=""
-                          className={classNames(
-                            file.current ? "" : "group-hover:opacity-75",
-                            "object-cover pointer-events-none"
+                          placeholder="tiny-image.jpg"
+                        >
+                          {(src, loading) => (
+                            <>
+                              {loading ? (
+                                <div class="bg-indigo-300 animate-pulse  h-full  "></div>
+                              ) : (
+                                <img
+                                  src={src}
+                                  alt=""
+                                  className={classNames(
+                                    file.current
+                                      ? ""
+                                      : "group-hover:opacity-75",
+                                    "object-fill w-full pointer-events-none h-full "
+                                  )}
+                                />
+                              )}
+                            </>
                           )}
-                        />
+                        </ProgressiveImage>
                       </div>
                       <p className="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">
                         {file.name}
