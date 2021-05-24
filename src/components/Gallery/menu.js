@@ -7,7 +7,20 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function DropMenu() {
+export default function DropMenu({ onTabClick }) {
+  const cats = [
+    "EPDM",
+    "Fibre",
+    "Galet",
+
+    "Gazon synthétique",
+
+    "Gravier ",
+    "Interlook",
+
+    "Jeux pour enfants",
+    "Pierres",
+  ];
   return (
     <Menu
       as="div"
@@ -39,105 +52,25 @@ export default function DropMenu() {
               static
               className=" z-50 origin-top-left  absolute right-0  mt-64 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
             >
-              <div className="py-1">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Edit
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Duplicate
-                    </a>
-                  )}
-                </Menu.Item>
-              </div>
-              <div className="py-1">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Archive
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Move
-                    </a>
-                  )}
-                </Menu.Item>
-              </div>
-              <div className="py-1">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Share
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Add to favorites
-                    </a>
-                  )}
-                </Menu.Item>
-              </div>
-              <div className="py-1">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Delete
-                    </a>
-                  )}
-                </Menu.Item>
-              </div>
+              {cats.map((cat) => (
+                <div className="py-1 cursor-pointer">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <div
+                        onClick={() => onTabClick(cat)}
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        {cat}
+                      </div>
+                    )}
+                  </Menu.Item>
+                </div>
+              ))}
             </Menu.Items>
           </Transition>
         </>

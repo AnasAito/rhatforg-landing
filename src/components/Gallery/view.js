@@ -40,12 +40,13 @@ const navigation = [
 ];
 
 const tabs = [
-  { name: "All", href: "#", current: true },
-
-  { name: "Brique pilée", href: "#", current: false },
-  { name: "Interlook", href: "#", current: false },
-  { name: "Bentonite ", href: "#", current: false },
-];
+  "All",
+  "Bentonite ",
+  "Brique pilée",
+  "Des équipements d'arrosage",
+].map((cat) => {
+  return { name: cat, href: "#", current: false };
+});
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -58,6 +59,18 @@ export default function Example({ entries, assets }) {
   const [tab, setTab] = useState("All");
   const [entries_, setEntries] = useState(entries["data"]);
   const [entry, setEntry] = useState(null);
+  const onTabClick = (tabName) => {
+    setTab(tabName);
+    if (tabName == "All") {
+      let new_entries = entries["data"];
+      setEntries(new_entries);
+    } else {
+      let new_entries = entries["data"].filter(
+        (entry) => entry["name"] == tabName
+      );
+      setEntries(new_entries);
+    }
+  };
   return (
     <>
       <div className="h-screen bg-gray-50 w-full flex overflow-hidden  ">
@@ -205,18 +218,7 @@ export default function Example({ entries, assets }) {
                       {tabs.map((tab_) => (
                         <option
                           key={tab_.name}
-                          onClick={() => {
-                            setTab(tab_.name);
-                            if (tab_.name == "All") {
-                              let new_entries = entries["data"];
-                              setEntries(new_entries);
-                            } else {
-                              let new_entries = entries["data"].filter(
-                                (entry) => entry["name"] == tab_.name
-                              );
-                              setEntries(new_entries);
-                            }
-                          }}
+                          onClick={() => onTabClick(tab_.name)}
                           aria-current={tab ? "page" : undefined}
                           className={classNames(
                             tab == tab_.name
@@ -262,7 +264,7 @@ export default function Example({ entries, assets }) {
                             {tab_.name}
                           </button>
                         ))}
-                        <DropMenu />
+                        <DropMenu onTabClick={onTabClick} />
                       </nav>
                       <Link to="/home">
                         <button
