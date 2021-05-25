@@ -31,8 +31,8 @@ export default function Landing() {
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
+              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto flex   justify-center  text-center">
+                <div className="  ">
                   <h1 className="text-white font-semibold text-5xl">
                     Welcome to Rhatforg gallery.
                   </h1>
@@ -64,7 +64,7 @@ export default function Landing() {
           </div>
         </div>
 
-        <section className="pb-20  relative block bg-gray-900">
+        <section className="pb-20 pt-10  relative block bg-gray-900">
           <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">

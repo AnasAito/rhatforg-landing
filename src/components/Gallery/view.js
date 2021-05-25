@@ -183,29 +183,20 @@ export default function Example({ entries, assets }) {
                     Products
                   </h1>
                   <div className="ml-6 bg-gray-100 p-0.5 rounded-lg flex items-center sm:hidden">
-                    <button
-                      type="button"
-                      className="p-1.5 rounded-md text-gray-400 hover:bg-white hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    >
-                      <ViewListIcon className="h-5 w-5" aria-hidden="true" />
-                      <span className="sr-only">Use list view</span>
-                    </button>
-                    <button
-                      type="button"
-                      className="ml-0.5 bg-white p-1.5 rounded-md shadow-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    >
-                      <ViewGridIconSolid
-                        className="h-5 w-5"
-                        aria-hidden="true"
-                      />
-                      <span className="sr-only">Use grid view</span>
-                    </button>
+                    <Link to="/home">
+                      <button
+                        type="button"
+                        className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      >
+                        GO HOME
+                      </button>
+                    </Link>
                   </div>
                 </div>
 
                 {/* Tabs */}
                 <div className="mt-3 sm:mt-2">
-                  <div className="sm:hidden">
+                  <div className="hidden">
                     <label htmlFor="tabs" className="sr-only">
                       Select a tab
                     </label>
@@ -218,7 +209,7 @@ export default function Example({ entries, assets }) {
                       {tabs.map((tab_) => (
                         <option
                           key={tab_.name}
-                          onClick={() => onTabClick(tab_.name)}
+                          onPress={() => onTabClick(tab_.name)}
                           aria-current={tab ? "page" : undefined}
                           className={classNames(
                             tab == tab_.name
@@ -290,8 +281,8 @@ export default function Example({ entries, assets }) {
                     role="list"
                     className={`${
                       focus == null
-                        ? "grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
-                        : "grid grid-cols-2 gap-x-4 gap-y-8  sm:gap-x-6 xl:gap-x-8"
+                        ? "grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+                        : "grid grid-cols-1 gap-x-4 gap-y-8  sm:grid-cols-3 sm:gap-x-6 xl:gap-x-8"
                     }`}
                   >
                     {entries_.map((file, index) => (
