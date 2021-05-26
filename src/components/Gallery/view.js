@@ -315,7 +315,7 @@ export default function Example({ entries, assets }) {
                             {(src, loading) => (
                               <>
                                 {loading ? (
-                                  <div class="bg-blue-300 animate-pulse  h-full  "></div>
+                                  <div class="bg-blue-300 animate-pulse  h-full rounded-lg  "></div>
                                 ) : (
                                   <img
                                     src={src}
