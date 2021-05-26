@@ -103,7 +103,7 @@ export default function Example({ entries, assets }) {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <div className="relative max-w-xs w-full bg-indigo-700 pt-5 pb-4 flex-1 flex flex-col">
+              <div className="relative max-w-xs w-full bg-blue-700 pt-5 pb-4 flex-1 flex flex-col">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-in-out duration-300"
@@ -143,8 +143,8 @@ export default function Example({ entries, assets }) {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? "bg-indigo-800 text-white"
-                              : "text-indigo-100 hover:bg-indigo-800 hover:text-white",
+                              ? "bg-blue-800 text-white"
+                              : "text-blue-100 hover:bg-blue-800 hover:text-white",
                             "group py-2 px-3 rounded-md flex items-center text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
@@ -153,7 +153,7 @@ export default function Example({ entries, assets }) {
                             className={classNames(
                               item.current
                                 ? "text-white"
-                                : "text-indigo-300 group-hover:text-white",
+                                : "text-blue-300 group-hover:text-white",
                               "mr-3 h-6 w-6"
                             )}
                             aria-hidden="true"
@@ -186,7 +186,7 @@ export default function Example({ entries, assets }) {
                     <Link to="/home">
                       <button
                         type="button"
-                        className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                       >
                         GO HOME
                       </button>
@@ -203,7 +203,7 @@ export default function Example({ entries, assets }) {
                     <select
                       id="tabs"
                       name="tabs"
-                      className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                      className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
                       defaultValue="All"
                     >
                       {tabs.map((tab_) => (
@@ -213,7 +213,7 @@ export default function Example({ entries, assets }) {
                           aria-current={tab ? "page" : undefined}
                           className={classNames(
                             tab == tab_.name
-                              ? "border-indigo-500 text-indigo-600"
+                              ? "border-blue-500 text-blue-600"
                               : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300",
                             "whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
                           )}
@@ -247,7 +247,7 @@ export default function Example({ entries, assets }) {
                             aria-current={tab ? "page" : undefined}
                             className={classNames(
                               tab == tab_.name
-                                ? "border-indigo-500 text-indigo-600"
+                                ? "border-blue-500 text-blue-600"
                                 : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300",
                               "whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
                             )}
@@ -260,7 +260,7 @@ export default function Example({ entries, assets }) {
                       <Link to="/home">
                         <button
                           type="button"
-                          className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                         >
                           GO HOME
                         </button>
@@ -302,8 +302,8 @@ export default function Example({ entries, assets }) {
                         <div
                           className={classNames(
                             focus == index
-                              ? "ring-2 ring-offset-2 ring-indigo-500"
-                              : "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500",
+                              ? "ring-2 ring-offset-2 ring-blue-500"
+                              : "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-blue-500",
                             "group block w-full h-96 aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden"
                           )}
                         >
@@ -315,7 +315,7 @@ export default function Example({ entries, assets }) {
                             {(src, loading) => (
                               <>
                                 {loading ? (
-                                  <div class="bg-indigo-300 animate-pulse  h-full  "></div>
+                                  <div class="bg-blue-300 animate-pulse  h-full  "></div>
                                 ) : (
                                   <img
                                     src={src}

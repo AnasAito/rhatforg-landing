@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Form from "./form";
 export default function Landing() {
   const myRef = useRef(null);
+  const logo = require("./assets/logo.png");
   const executeScroll = () =>
     myRef.current.scrollIntoView({ behavior: "smooth" });
   return (
@@ -32,7 +33,8 @@ export default function Landing() {
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto flex   justify-center  text-center">
-                <div className="  ">
+                <div className="  flex flex-col  items-center  ">
+                  <img class=" transform  w-96 h-96  " src={logo} />
                   <h1 className="text-white font-semibold text-5xl">
                     Welcome to Rhatforg gallery.
                   </h1>
@@ -44,7 +46,7 @@ export default function Landing() {
                   <div className="mt-5 sm:mt-8 sm:flex justify-center ">
                     <div className="rounded-md shadow">
                       <Link to="/gallery">
-                        <button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 md:py-4 md:text-lg md:px-10">
+                        <button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
                           Gallery
                         </button>
                       </Link>
@@ -52,7 +54,7 @@ export default function Landing() {
                     <div className="mt-3 sm:mt-0 sm:ml-3">
                       <button
                         onClick={executeScroll}
-                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-purple-100 hover:bg-purple-200 md:py-4 md:text-lg md:px-10"
+                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
                       >
                         Contact us
                       </button>

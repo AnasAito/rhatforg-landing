@@ -10,7 +10,7 @@ export default function Footer() {
               Let's keep{" "}
               <a
                 href="https://www.linkedin.com/in/rhatforg"
-                class="font-semibold text underline  cursor-pointer text-indigo-400 "
+                class="font-semibold text underline  cursor-pointer text-blue-400 "
               >
                 in touch!
               </a>
