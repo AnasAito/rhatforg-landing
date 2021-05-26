@@ -41,7 +41,7 @@ const navigation = [
 
 const tabs = [
   "All",
-  "Bentonite ",
+  "Bentonite",
   "Brique pilée",
   "Des équipements d'arrosage",
 ].map((cat) => {

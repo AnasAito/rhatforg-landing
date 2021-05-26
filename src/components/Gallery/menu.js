@@ -15,7 +15,7 @@ export default function DropMenu({ onTabClick }) {
 
     "Gazon synthétique",
 
-    "Gravier ",
+    "Gravier",
     "Interlook",
 
     "Jeux pour enfants",
