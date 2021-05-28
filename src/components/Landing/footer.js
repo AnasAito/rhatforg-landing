@@ -16,8 +16,8 @@ export default function Footer() {
               </a>
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-700">
-              Call us on this <a href="mailto: abc@rhatforg.ma"> Email</a> or
-              this <a href="tel:123-456-7890">number</a> , we respond 1-2
+              Call us on this <a href="mailto: rhatforg@gmail.com"> Email</a> or
+              this <a href="tel:212524317288">number</a> , we respond 1-2
               business days.
             </h5>
           </div>
