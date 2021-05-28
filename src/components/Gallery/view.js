@@ -39,12 +39,7 @@ const navigation = [
   { name: "Settings", href: "#", icon: CogIcon, current: false },
 ];
 
-const tabs = [
-  "All",
-  "Bentonite",
-  "Brique pilée",
-  "Des équipements d'arrosage",
-].map((cat) => {
+const tabs = ["All", "Sable silice", "Gravier", "Galet"].map((cat) => {
   return { name: cat, href: "#", current: false };
 });
 
@@ -288,7 +283,7 @@ export default function Example({ entries, assets }) {
                     {entries_.map((file, index) => (
                       <li
                         onClick={() => {
-                          console.log("test");
+                          console.log("id", file.img_id);
                           setOpen(true);
                           setEntry({
                             name: file.name,

@@ -9,17 +9,24 @@ function classNames(...classes) {
 
 export default function DropMenu({ onTabClick }) {
   const cats = [
+    "Bentonite",
+    "Brique pilée",
+    "Dalle en caoutchouc",
+
+    "Des équipements sportifs",
     "EPDM",
     "Fibre",
-    "Galet",
 
     "Gazon synthétique",
 
-    "Gravier",
     "Interlook",
-
     "Jeux pour enfants",
-    "Pierres",
+    "Micro sable",
+    "Pouzzlane",
+    "SBR",
+    "crépine et accéssoires",
+    "Silice réactif",
+    "Tablette de sel",
   ];
   return (
     <Menu
@@ -50,7 +57,7 @@ export default function DropMenu({ onTabClick }) {
           >
             <Menu.Items
               static
-              className=" z-50 origin-top-left  absolute right-0  mt-64 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+              className=" z-50 origin-top-left  absolute right-0   mt-64 h-80 overflow-auto  w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
             >
               {cats.map((cat) => (
                 <div className="py-1 cursor-pointer">
