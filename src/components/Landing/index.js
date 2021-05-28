@@ -39,9 +39,9 @@ export default function Landing() {
                     Welcome to Rhatforg gallery.
                   </h1>
                   <p className="mt-4 text-lg text-gray-300">
-                    This is a simple example of a Landing Page you can build
-                    using Tailwind Starter Kit. It features multiple CSS
-                    components based on the Tailwindcss design system.
+                    Rhatforg gallery was made with one goal in mind, ease our
+                    client exploration and accessibility to our diversified
+                    portfolio of products and services .
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex justify-center ">
                     <div className="rounded-md shadow">
@@ -74,9 +74,9 @@ export default function Landing() {
                   Our offers
                 </h2>
                 <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
+                  Rhatforg is a company that process and market silica sand,
+                  rubber granules (sbr, epdm), bentonite and presents to her
+                  customers many other products with different services.
                 </p>
               </div>
             </div>
@@ -96,8 +96,8 @@ export default function Landing() {
                   Excelent Services
                 </h6>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  We accompany our client with a many services to ease their
+                  work .
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
@@ -114,11 +114,11 @@ export default function Landing() {
                   </svg>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  diverse products
+                  Diverse products
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Our products are made from natural ressources with quality in
+                  mind .
                 </p>
               </div>
             </div>

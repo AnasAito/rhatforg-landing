@@ -16,7 +16,9 @@ export default function Footer() {
               </a>
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-700">
-              Find us on any of these platforms, we respond 1-2 business days.
+              Call us on this <a href="mailto: abc@rhatforg.ma"> Email</a> or
+              this <a href="tel:123-456-7890">number</a> , we respond 1-2
+              business days.
             </h5>
           </div>
         </div>

@@ -8,7 +8,7 @@ import ReactGA from "react-ga";
 
 export default function App() {
   ReactGA.initialize("G-CJDBYS8RY6");
-ReactGA.pageview(window.location.pathname + window.location.search);
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <Router>
       <Switch>
