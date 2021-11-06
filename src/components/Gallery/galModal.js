@@ -20,7 +20,7 @@ export default function Modal({ entry }) {
           </div>
         </div>
         <h3 className="font-medium text-gray-900">Contact us</h3>
-        <Form />
+        <Form subject={entry.name} />
       </div>
     </aside>
   );

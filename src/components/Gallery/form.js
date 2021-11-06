@@ -1,8 +1,12 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
-function Form() {
-  const [state, handleSubmit] = useForm("xzbyenay");
+function Form({ subject }) {
+  const [state, handleSubmit] = useForm("xzbyenay", {
+    data: {
+      _subject: subject ? `A message about ${subject}` : "General message",
+    },
+  });
   if (state.succeeded) {
     return (
       <p>Thanks for your message we will we back to you as soon as possible!</p>
