@@ -43,7 +43,7 @@ export default function Landing() {
                     client exploration and accessibility to our diversified
                     portfolio of products and services .
                   </p>
-                  <div className="mt-5 sm:mt-8 sm:flex justify-center ">
+                  <div className="my-5 sm:my-8 sm:flex justify-center ">
                     <div className="rounded-md shadow">
                       <Link to="/gallery">
                         <button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
