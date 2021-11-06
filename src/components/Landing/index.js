@@ -81,7 +81,7 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              <div className="w-full lg:w-3/12 px-4 py-4 text-center">
                 <div className="text-gray-900  w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <svg class=" w-8 h-8" viewBox="0 0 512 512">
                     <path d="m90.050781 395.949219c-7.167969 0-14.058593 1.789062-20.171875 5.148437-32.203125-41.28125-49.878906-92.5625-49.878906-145.097656 0-130.132812 105.867188-236 236-236 15.820312 0 31.632812 1.574219 47 4.679688 5.40625 1.09375 10.6875-2.40625 11.78125-7.820313s-2.40625-10.6875-7.820312-11.785156c-16.667969-3.367188-33.8125-5.074219-50.960938-5.074219-68.378906 0-132.667969 26.628906-181.019531 74.980469-48.351563 48.351562-74.980469 112.640625-74.980469 181.019531 0 57.519531 19.53125 113.652344 55.089844 158.652344-4.578125 6.839844-7.039063 14.878906-7.039063 23.296875 0 11.21875 4.371094 21.765625 12.304688 29.695312 7.929687 7.933594 18.476562 12.304688 29.695312 12.304688s21.765625-4.371094 29.699219-12.304688c7.933594-7.929687 12.300781-18.480469 12.300781-29.699219 0-11.214843-4.367187-21.765624-12.300781-29.695312-7.933594-7.933594-18.480469-12.300781-29.699219-12.300781zm15.554688 57.554687c-4.152344 4.15625-9.679688 6.445313-15.554688 6.445313s-11.398437-2.289063-15.554687-6.445313-6.445313-9.679687-6.445313-15.554687c0-5.878907 2.289063-11.402344 6.445313-15.558594 4.152344-4.15625 9.679687-6.441406 15.554687-6.441406s11.398438 2.289062 15.554688 6.441406c4.15625 4.15625 6.445312 9.679687 6.445312 15.558594 0 5.875-2.289062 11.398437-6.445312 15.554687zm0 0" />
@@ -95,12 +95,12 @@ export default function Landing() {
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   Excelent Services
                 </h6>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-4  text-gray-500">
                   We accompany our client with a many services to ease their
                   work .
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              <div className="w-full lg:w-3/12 px-4 py-4 text-center">
                 <div className="text-gray-900 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <svg class=" w-8 h-8" viewBox="0 0 512.646 512.646">
                     <g>
@@ -116,7 +116,7 @@ export default function Landing() {
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Diverse products
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-4  text-gray-500">
                   Our products are made from natural ressources with quality in
                   mind .
                 </p>
@@ -126,7 +126,7 @@ export default function Landing() {
         </section>
         <section
           ref={myRef}
-          className="relative block py-24 lg:pt-0 bg-gray-900"
+          className="relative block py-24  lg:pt-0 bg-gray-900"
         >
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
